@@ -28,7 +28,7 @@ var bar = new ProgressBar(':bar', { total: timeSum, width: 40 });
 var timer = setInterval(function () {
   bar.tick();
   if (bar.complete) {
-    player.play('./timer.mp3', function(err){
+    player.play(__dirname + '/timer.mp3', function(err){
       if (err) console.log(err);
     });
     clearInterval(timer);
